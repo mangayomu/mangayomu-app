@@ -1,0 +1,12 @@
+{
+  "appId": "com.mangayomu.app",
+  "appName": "MangaYomu",
+  "webDir": "client/dist",
+  "server": {
+    "androidScheme": "http",
+    "allowNavigation": [
+      "localhost",
+      "127.0.0.1"
+    ]
+  }
+}

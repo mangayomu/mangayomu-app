@@ -1,0 +1,18 @@
+{
+  "name": "@mangayomu/server-core",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "dependencies": {
+    "@mangayomu/backup-import": "file:../backup-import",
+    "bcryptjs": "^2.4.3",
+    "better-sqlite3": "^11.6.0",
+    "busboy": "^1.6.0",
+    "express": "^4.21.0",
+    "linkedom": "^0.18.12",
+    "sql.js": "^1.14.1",
+    "yauzl": "^2.10.0"
+  }
+}

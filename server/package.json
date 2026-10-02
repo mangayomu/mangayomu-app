@@ -1,0 +1,12 @@
+{
+  "name": "@mangayomu/server",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "MANGAYOMU_DEV=1 node --watch src/index.js",
+    "start": "MANGAYOMU_SERVE_STATIC=1 node src/index.js"
+  },
+  "dependencies": {
+    "@mangayomu/server-core": "file:../packages/server-core"
+  }
+}

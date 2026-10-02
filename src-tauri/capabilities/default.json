@@ -1,0 +1,7 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "default",
+  "description": "Core permissions for the MangaYomu desktop window. The embedded server is spawned from Rust, so no shell permission is required for the frontend.",
+  "windows": ["main"],
+  "permissions": ["core:default"]
+}

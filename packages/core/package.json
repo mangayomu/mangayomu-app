@@ -1,0 +1,10 @@
+{
+  "name": "@mangayomu/core",
+  "private": true,
+  "type": "module",
+  "exports": "./src/index.ts",
+  "dependencies": {
+    "@mangayomu/db-contract": "file:../db-contract",
+    "bcryptjs": "^2.4.3"
+  }
+}

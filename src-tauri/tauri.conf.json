@@ -1,0 +1,40 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "MangaYomu",
+  "version": "0.1.0",
+  "identifier": "com.mangayomu.app",
+  "build": {
+    "frontendDist": "../client/dist"
+  },
+  "app": {
+    "withGlobalTauri": false,
+    "windows": [],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": ["app", "dmg", "nsis"],
+    "category": "Entertainment",
+    "shortDescription": "Manga reader with a synced local library",
+    "longDescription": "MangaYomu bundles the client and a local Node.js server, so the reader, the catalog and the library work offline on this machine.",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ],
+    "resources": [
+      "resources/server",
+      "resources/client"
+    ],
+    "externalBin": [
+      "binaries/mangayomu-server"
+    ],
+    "macOS": {
+      "minimumSystemVersion": "10.15"
+    }
+  }
+}

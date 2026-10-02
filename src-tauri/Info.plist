@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<!-- The client can read a server address from a QR code with the camera.
+	     macOS terminates an app that asks for the camera without a usage
+	     description, so this key is required for the scan button. -->
+	<key>NSCameraUsageDescription</key>
+	<string>MangaYomu uses the camera only to read the QR code of another instance, so it can connect to that server.</string>
+	<key>NSLocalNetworkUsageDescription</key>
+	<string>MangaYomu connects to the MangaYomu server on your local network.</string>
+</dict>
+</plist>

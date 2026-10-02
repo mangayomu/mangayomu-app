@@ -1,0 +1,11 @@
+{
+  "name": "@mangayomu/server-android",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "dependencies": {
+    "@mangayomu/server-core": "file:../packages/server-core"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "@mangayomu/db-browser",
+  "private": true,
+  "type": "module",
+  "exports": "./src/index.ts",
+  "dependencies": {
+    "@mangayomu/db-contract": "file:../db-contract",
+    "sql.js": "^1.14.1"
+  }
+}

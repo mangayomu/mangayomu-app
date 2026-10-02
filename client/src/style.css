@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.safe-area-bottom {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+/* Keep content clear of the fixed section navigation. */
+/* The app's fixed bottom navigation must never cover page content. This rule
+   has to win over the Tailwind padding utilities on the same element (`p-4`,
+   `sm:p-6`), which have the same single-class specificity: doubling the class
+   raises it to 0,2,0 regardless of the order the stylesheets are bundled in. */
+.section-page-content.section-page-content {
+  padding-bottom: calc(4.5rem + env(safe-area-inset-bottom, 0px));
+}
+
+/* ===== Dark mode overrides =====
+   Only override structural bg colors. Text colors are left alone —
+   they already have sufficient contrast on dark bg, and overriding them
+   would break the Sync page (intentionally dark in both modes). */
+
+.dark {
+  color-scheme: dark;
+}
+
+/* Page background: gray-50 → gray-950 */
+.dark .bg-gray-50 {
+  background-color: rgb(3 7 18) !important; /* gray-950 */
+}
+
+/* Cards: bg-white → gray-800 */
+.dark .bg-white {
+  background-color: rgb(31 41 55) !important;
+}
+
+/* Primary text: gray-900 → gray-100 */
+.dark .text-gray-900 {
+  color: rgb(243 244 246) !important;
+}
+.dark .text-gray-700 {
+  color: rgb(209 213 219) !important;
+}
+
+/* Secondary surfaces: bg-gray-100 → gray-700, bg-gray-200 → gray-600 */
+.dark .bg-gray-100 {
+  background-color: rgb(55 65 81) !important;
+}
+.dark .bg-gray-200 {
+  background-color: rgb(75 85 99) !important;
+}
+.dark .bg-gray-300 {
+  background-color: rgb(107 114 128) !important;
+}
+
+/* Shadow on cards — visible in dark */
+.dark .shadow,
+.dark .shadow-lg,
+.dark .shadow-md {
+  --tw-shadow: 0 1px 3px 0 rgba(0,0,0,0.4);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 transparent), var(--tw-ring-shadow, 0 0 transparent), var(--tw-shadow);
+}
+.dark .shadow-lg {
+  --tw-shadow: 0 10px 15px -3px rgba(0,0,0,0.5), 0 4px 6px -4px rgba(0,0,0,0.5);
+}
+
+/* Dropdown panels / menus */
+.dark .bg-white.shadow-lg,
+.dark .bg-white.shadow-md,
+.dark .bg-white.border {
+  background-color: rgb(31 41 55) !important;
+}
+
+/* Theme toggle icon rotation */
+.theme-toggle {
+  transition: transform 0.5s ease;
+}
+.dark .theme-toggle {
+  transform: rotate(360deg);
+}
